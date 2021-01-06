@@ -1,0 +1,1 @@
+[{"input":"5\n3 6 2 1\n2 2 2 1\n2 2 2 2\n4 4 2 2\n2 1 1 2","output":"YES\n010001\n100100\n001010\nNO\nYES\n11\n11\nYES\n1100\n1100\n0011\n0011\nYES\n1\n1"},{"input":"3\n34 4 1 34\n4 12 9 4\n8 20 10 4","output":"NO\nNO"}]
