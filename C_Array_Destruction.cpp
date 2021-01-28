@@ -41,38 +41,45 @@ void compute()
         {
             x = a[m];
             int t1 = m + 1, t2 = nt - 1;
-            while (a[t1] == 0 || t1 == n)
-                ++t1;
-            if (t1 >= nt)
+            if (ans.size() <= (nt / 2 - 1))
             {
-                ans.push_back({a[m], a[n]});
-                a[m] = 0;
-                a[n] = 0;
-                break;
-            }
-
-            while (t1 < t2)
-            {
-                if (a[t2] == 0 || t2 == n)
-                    --t2;
-                else
+                while (a[t1] == 0 || t1 == n)
+                    ++t1;
+                if (t1 >= nt)
                 {
-                    int q = a[t1] + a[t2];
-                    if (q > x)
-                    {
-                        cout << "NO\n";
-                        return;
-                    }
-                    else if (q < x)
+                    ans.push_back({a[m], a[n]});
+                    a[m] = 0;
+                    a[n] = 0;
+                    break;
+                }
+
+                while (t1 < t2)
+                {
+                    if (a[t2] == 0 || t2 == n)
                         --t2;
                     else
-                        break;
+                    {
+                        int q = a[t1] + a[t2];
+                        if (q > x)
+                        {
+                            cout << "NO\n";
+                            return;
+                        }
+                        else if (q < x)
+                            --t2;
+                        else
+                            break;
+                    }
+                }
+                if (t1 >= t2)
+                {
+                    cout << "NO\n";
+                    return;
                 }
             }
-            if (t1 >= t2)
+            else
             {
-                cout << "NO\n";
-                return;
+                t1 = t2 = nt + 1;
             }
             int j;
             if (n < 0)
@@ -98,8 +105,9 @@ void compute()
             n = t2;
         }
     }
+    int sum = ans[0].first + ans[0].second;
     cout << "YES\n";
-    cout << ans.size() << "\n";
+    cout << sum << "\n";
     for (auto z : ans)
         cout << z.first << " " << z.second << "\n";
 }
