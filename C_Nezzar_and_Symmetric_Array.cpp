@@ -35,6 +35,11 @@ void compute()
         cin >> t;
         d.insert(t);
     }
+    if (d.size() != n)
+    {
+            cout << "NO\n";
+            return;
+    }
     for (auto x : d)
     {
         if (x % 2 != 0)
