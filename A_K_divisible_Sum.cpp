@@ -25,19 +25,16 @@ void swapi(int *a, int *b)
 
 void compute()
 {
-    int n, ans = 1;
-    cin >> n;
-    vector<int> a(n);
-    for (int &x : a)
-        cin >> x;
-
-    for (int i = 0; i < n; ++i)
+    long long n, k, ans;
+    cin >> n >> k;
+    if (k < n)
     {
-        int t = 1;
-        while (i + 1 < n && a[i] == a[i + 1])
-            ++i, ++t;
-        ans = max(ans, t);
+        if (n % k == 0)
+            k = n;
+        else
+            k = (n / k + 1) * k;
     }
+    ans = (k / n) + ((k % n) == 0 ? 0 : 1);
     cout << ans << "\n";
 }
 
