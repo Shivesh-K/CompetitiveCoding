@@ -35,6 +35,7 @@
         "xlocale": "cpp",
         "array": "cpp",
         "forward_list": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "stack": "cpp"
     }
 }
