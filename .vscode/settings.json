@@ -36,6 +36,8 @@
         "array": "cpp",
         "forward_list": "cpp",
         "queue": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "initializer_list": "cpp",
+        "xstddef": "cpp"
     }
 }
