@@ -38,6 +38,8 @@
         "queue": "cpp",
         "stack": "cpp",
         "initializer_list": "cpp",
-        "xstddef": "cpp"
+        "xstddef": "cpp",
+        "regex": "cpp",
+        "xhash": "cpp"
     }
 }

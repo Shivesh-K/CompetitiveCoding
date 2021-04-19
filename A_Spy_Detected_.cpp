@@ -25,35 +25,35 @@ void swapi(int *a, int *b)
 
 void compute()
 {
-    string s, t1, t2;
-    cin >> s;
-    int size = s.length(), c1, c2;
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    for (int &t : v)
+        cin >> t;
 
-    c1 = c2 = 0;
-    for (int i = 0; i < size; ++i)
+    int f = v[0];
+    int s = v[1];
+    int t = v[2];
+
+    int c = 0;
+    if (v[0] == v[1] || v[0] == v[2])
     {
-        if (s[i] == 'a')
-            ++c1;
-        else
-            break;
+        c = v[0];
     }
-    if (c1 == size)
+    else
     {
-        cout << "NO\n";
+        cout << "1\n";
         return;
     }
 
-    cout << "YES\n";
-    t1 = 'a' + s;
-    for (int i = 0; i < (size + 1) / 2; ++i)
+    for (int i = 0; i < n; ++i)
     {
-        if (t1[i] != t1[size - i])
+        if (v[i] != c)
         {
-            cout << t1 << "\n";
+            cout << i + 1 << "\n";
             return;
         }
     }
-    cout << s << "a\n";
 }
 
 int main()

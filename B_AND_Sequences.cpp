@@ -7,53 +7,32 @@ using namespace std;
 #define GOLD ((1 + sqrt(5)) / 2)
 const double PI = 3.14159265358979323846264338327950288419716939937510582097494459230;
 
-void swaps(char *x, char *y)
-{
-    char temp;
-    temp = *x;
-    *x = *y;
-    *y = temp;
-}
-
-void swapi(int *a, int *b)
-{
-    int temp;
-    temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
 void compute()
 {
-    string s, t1, t2;
-    cin >> s;
-    int size = s.length(), c1, c2;
+    long long n, ans = 0, a, mod = 1000000007;
+    cin >> n;
+    vector<long long> v(n);
+    for (auto &t : v)
+    {
+        cin >> t;
+    }
+    a = v[0];
+    for (auto &t : v)
+    {
+        a &= t;
+    }
+    for (auto &t : v)
+    {
+        if (t == a)
+            ++ans;
+    }
+    ans = ans * (ans - 1) % mod;
+    for (long long i = 1; i <= n - 2; ++i)
+    {
+        ans = (ans * i) % mod;
+    }
 
-    c1 = c2 = 0;
-    for (int i = 0; i < size; ++i)
-    {
-        if (s[i] == 'a')
-            ++c1;
-        else
-            break;
-    }
-    if (c1 == size)
-    {
-        cout << "NO\n";
-        return;
-    }
-
-    cout << "YES\n";
-    t1 = 'a' + s;
-    for (int i = 0; i < (size + 1) / 2; ++i)
-    {
-        if (t1[i] != t1[size - i])
-        {
-            cout << t1 << "\n";
-            return;
-        }
-    }
-    cout << s << "a\n";
+    cout << ans << "\n";
 }
 
 int main()

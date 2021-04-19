@@ -25,35 +25,19 @@ void swapi(int *a, int *b)
 
 void compute()
 {
-    string s, t1, t2;
-    cin >> s;
-    int size = s.length(), c1, c2;
-
-    c1 = c2 = 0;
-    for (int i = 0; i < size; ++i)
+    int n, count = 1;
+    string s;
+    cin >> n >> s;
+    cout << "1 ";
+    for (int i = 1; i < n; ++i)
     {
-        if (s[i] == 'a')
-            ++c1;
+        if (s[i] > s[i - 1])
+            count++;
         else
-            break;
+            count = 1;
+        cout << count << " ";
     }
-    if (c1 == size)
-    {
-        cout << "NO\n";
-        return;
-    }
-
-    cout << "YES\n";
-    t1 = 'a' + s;
-    for (int i = 0; i < (size + 1) / 2; ++i)
-    {
-        if (t1[i] != t1[size - i])
-        {
-            cout << t1 << "\n";
-            return;
-        }
-    }
-    cout << s << "a\n";
+    cout << "\n";
 }
 
 int main()
@@ -63,11 +47,13 @@ int main()
     freopen("output.txt", "w", stdout);
     freopen("log.txt", "w", stderr);
 #endif
-    int t;
+    int t, i = 1;
     scanf("%d", &t);
-    while (t--)
+    while (i <= t)
     {
+        cout << "Case #" << i << ": ";
         compute();
+        ++i;
     }
 #ifdef debug
     fprintf(stdout, "\nTIME: %.3lf sec\n", (double)clock() / (CLOCKS_PER_SEC));
