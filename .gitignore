@@ -1,2 +1,4 @@
 *.bin
 *.prob
+*.exe
+*.json
