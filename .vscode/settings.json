@@ -14,6 +14,10 @@
         "deque": "cpp",
         "forward_list": "cpp",
         "list": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "xtree": "cpp",
+        "xhash": "cpp",
+        "stack": "cpp",
+        "set": "cpp"
     }
 }
