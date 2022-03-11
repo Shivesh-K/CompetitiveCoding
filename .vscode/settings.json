@@ -1,23 +1,20 @@
 {
     "files.associations": {
-        "xstring": "cpp",
+        "*.ejs": "html",
         "utility": "cpp",
+        "future": "cpp",
+        "system_error": "cpp",
+        "typeindex": "cpp",
+        "xlocale": "cpp",
+        "iostream": "cpp",
         "vector": "cpp",
+        "xstring": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
         "map": "cpp",
         "unordered_map": "cpp",
-        "functional": "cpp",
-        "xutility": "cpp",
-        "random": "cpp",
-        "queue": "cpp",
-        "iostream": "cpp",
-        "array": "cpp",
-        "deque": "cpp",
-        "forward_list": "cpp",
-        "list": "cpp",
-        "ostream": "cpp",
-        "xtree": "cpp",
         "xhash": "cpp",
-        "stack": "cpp",
-        "set": "cpp"
+        "xtree": "cpp",
+        "queue": "cpp"
     }
 }
