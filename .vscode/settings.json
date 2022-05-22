@@ -15,6 +15,12 @@
         "unordered_map": "cpp",
         "xhash": "cpp",
         "xtree": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "string": "cpp",
+        "stack": "cpp",
+        "xutility": "cpp",
+        "ostream": "cpp",
+        "regex": "cpp",
+        "sstream": "cpp"
     }
 }
