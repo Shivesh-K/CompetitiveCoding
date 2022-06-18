@@ -21,6 +21,7 @@
         "xutility": "cpp",
         "ostream": "cpp",
         "regex": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "random": "cpp"
     }
 }
