@@ -22,6 +22,8 @@
         "ostream": "cpp",
         "regex": "cpp",
         "sstream": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "set": "cpp",
+        "algorithm": "cpp"
     }
 }
